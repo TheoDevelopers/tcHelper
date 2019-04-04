@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54f09bd2-ca45-4828-b90a-aaaafffc6366" name="Default Changelist" comment="" />
+    <list default="true" id="54f09bd2-ca45-4828-b90a-aaaafffc6366" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/docs/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.rst" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +36,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/index.rst">
           <provider selected="true" editor-type-id="restructured-text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/conf.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="748">
@@ -96,8 +98,8 @@
         <option value="$PROJECT_DIR$/tchelper/tchelper.py" />
         <option value="$PROJECT_DIR$/tchelper/db.py" />
         <option value="$PROJECT_DIR$/tchelper/configr.py" />
-        <option value="$PROJECT_DIR$/docs/index.rst" />
         <option value="$PROJECT_DIR$/docs/conf.py" />
+        <option value="$PROJECT_DIR$/docs/index.rst" />
       </list>
     </option>
   </component>
@@ -109,7 +111,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="48" />
     <option name="width" value="1400" />
@@ -225,7 +227,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="28" width="1920" height="1018" extended-state="7" />
+    <frame x="0" y="28" width="1920" height="1018" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49944136" visible="true" weight="0.106189966" />
@@ -309,9 +311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/conf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -321,6 +320,9 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
   </component>
 </project>

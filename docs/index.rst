@@ -20,7 +20,7 @@ features that can only be unlocked with donations. Since tcHelper is open
 source and uses the GPL v.3 license, other PTC software developers can create
 programs that interact with tcHelper.
 
-Development 
+Development
 -----------
 tcHelper is being actively developed and is still in its early stages. Check
 back every few weeks to keep an eye on the progress.
@@ -34,7 +34,6 @@ Table of Content
 
    /manual/why_open_source
    /manual/installation
-   /source/tchelper
 
 Indices and tables
 ==================
