@@ -1,0 +1,416 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tchelper.gui package &mdash; tcHelper  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="tchelper.gui.resource package" href="tchelper.gui.resource.html" />
+    <link rel="prev" title="tchelper package" href="tchelper.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> tcHelper
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../manual/why_open_source.html">Open Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="tchelper.html">tchelper package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tchelper.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">tchelper.gui package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tchelper.gui.AddBrotherWindow">tchelper.gui.AddBrotherWindow module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tchelper.gui.AddCongregationWindow">tchelper.gui.AddCongregationWindow module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tchelper.gui.AddOutlineWindow">tchelper.gui.AddOutlineWindow module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tchelper.gui.BrotherWindow">tchelper.gui.BrotherWindow module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tchelper.gui.CongregationWindow">tchelper.gui.CongregationWindow module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tchelper.gui.DatabaseWindow">tchelper.gui.DatabaseWindow module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tchelper.gui.MainWindow">tchelper.gui.MainWindow module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tchelper.gui.OutlineWindow">tchelper.gui.OutlineWindow module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tchelper.gui.icons_rc">tchelper.gui.icons_rc module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tchelper.gui">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tchelper.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tchelper.html#module-tchelper.configr">tchelper.configr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tchelper.html#module-tchelper.db">tchelper.db module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tchelper.html#tchelper-tchelper-module">tchelper.tchelper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tchelper.html#module-tchelper">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">tcHelper</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="tchelper.html">tchelper package</a> &raquo;</li>
+        
+      <li>tchelper.gui package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/tchelper.gui.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tchelper-gui-package">
+<h1>tchelper.gui package<a class="headerlink" href="#tchelper-gui-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tchelper.gui.resource.html">tchelper.gui.resource package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tchelper.gui.resource.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tchelper.gui.resource.html#module-tchelper.gui.resource.icons_rc">tchelper.gui.resource.icons_rc module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tchelper.gui.resource.html#module-tchelper.gui.resource">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tchelper.gui.AddBrotherWindow">
+<span id="tchelper-gui-addbrotherwindow-module"></span><h2>tchelper.gui.AddBrotherWindow module<a class="headerlink" href="#module-tchelper.gui.AddBrotherWindow" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tchelper.gui.AddBrotherWindow.Ui_AddBrotherWindow">
+<em class="property">class </em><code class="descclassname">tchelper.gui.AddBrotherWindow.</code><code class="descname">Ui_AddBrotherWindow</code><a class="headerlink" href="#tchelper.gui.AddBrotherWindow.Ui_AddBrotherWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="tchelper.gui.AddBrotherWindow.Ui_AddBrotherWindow.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>AddBrotherWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.AddBrotherWindow.Ui_AddBrotherWindow.retranslateUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tchelper.gui.AddBrotherWindow.Ui_AddBrotherWindow.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>AddBrotherWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.AddBrotherWindow.Ui_AddBrotherWindow.setupUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tchelper.gui.AddCongregationWindow">
+<span id="tchelper-gui-addcongregationwindow-module"></span><h2>tchelper.gui.AddCongregationWindow module<a class="headerlink" href="#module-tchelper.gui.AddCongregationWindow" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tchelper.gui.AddCongregationWindow.Ui_AddCongregationWindow">
+<em class="property">class </em><code class="descclassname">tchelper.gui.AddCongregationWindow.</code><code class="descname">Ui_AddCongregationWindow</code><a class="headerlink" href="#tchelper.gui.AddCongregationWindow.Ui_AddCongregationWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="tchelper.gui.AddCongregationWindow.Ui_AddCongregationWindow.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>AddCongregationWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.AddCongregationWindow.Ui_AddCongregationWindow.retranslateUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tchelper.gui.AddCongregationWindow.Ui_AddCongregationWindow.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>AddCongregationWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.AddCongregationWindow.Ui_AddCongregationWindow.setupUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tchelper.gui.AddOutlineWindow">
+<span id="tchelper-gui-addoutlinewindow-module"></span><h2>tchelper.gui.AddOutlineWindow module<a class="headerlink" href="#module-tchelper.gui.AddOutlineWindow" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tchelper.gui.AddOutlineWindow.Ui_AddOutlineWindow">
+<em class="property">class </em><code class="descclassname">tchelper.gui.AddOutlineWindow.</code><code class="descname">Ui_AddOutlineWindow</code><a class="headerlink" href="#tchelper.gui.AddOutlineWindow.Ui_AddOutlineWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="tchelper.gui.AddOutlineWindow.Ui_AddOutlineWindow.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>AddOutlineWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.AddOutlineWindow.Ui_AddOutlineWindow.retranslateUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tchelper.gui.AddOutlineWindow.Ui_AddOutlineWindow.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>AddOutlineWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.AddOutlineWindow.Ui_AddOutlineWindow.setupUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tchelper.gui.BrotherWindow">
+<span id="tchelper-gui-brotherwindow-module"></span><h2>tchelper.gui.BrotherWindow module<a class="headerlink" href="#module-tchelper.gui.BrotherWindow" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tchelper.gui.BrotherWindow.Ui_BrotherWindow">
+<em class="property">class </em><code class="descclassname">tchelper.gui.BrotherWindow.</code><code class="descname">Ui_BrotherWindow</code><a class="headerlink" href="#tchelper.gui.BrotherWindow.Ui_BrotherWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="tchelper.gui.BrotherWindow.Ui_BrotherWindow.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>BrotherWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.BrotherWindow.Ui_BrotherWindow.retranslateUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tchelper.gui.BrotherWindow.Ui_BrotherWindow.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>BrotherWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.BrotherWindow.Ui_BrotherWindow.setupUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tchelper.gui.CongregationWindow">
+<span id="tchelper-gui-congregationwindow-module"></span><h2>tchelper.gui.CongregationWindow module<a class="headerlink" href="#module-tchelper.gui.CongregationWindow" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tchelper.gui.CongregationWindow.Ui_CongregationWindow">
+<em class="property">class </em><code class="descclassname">tchelper.gui.CongregationWindow.</code><code class="descname">Ui_CongregationWindow</code><a class="headerlink" href="#tchelper.gui.CongregationWindow.Ui_CongregationWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="tchelper.gui.CongregationWindow.Ui_CongregationWindow.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>CongregationWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.CongregationWindow.Ui_CongregationWindow.retranslateUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tchelper.gui.CongregationWindow.Ui_CongregationWindow.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>CongregationWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.CongregationWindow.Ui_CongregationWindow.setupUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tchelper.gui.DatabaseWindow">
+<span id="tchelper-gui-databasewindow-module"></span><h2>tchelper.gui.DatabaseWindow module<a class="headerlink" href="#module-tchelper.gui.DatabaseWindow" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tchelper.gui.DatabaseWindow.Ui_DatabaseWindow">
+<em class="property">class </em><code class="descclassname">tchelper.gui.DatabaseWindow.</code><code class="descname">Ui_DatabaseWindow</code><a class="headerlink" href="#tchelper.gui.DatabaseWindow.Ui_DatabaseWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="tchelper.gui.DatabaseWindow.Ui_DatabaseWindow.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>DatabaseWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.DatabaseWindow.Ui_DatabaseWindow.retranslateUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tchelper.gui.DatabaseWindow.Ui_DatabaseWindow.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>DatabaseWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.DatabaseWindow.Ui_DatabaseWindow.setupUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tchelper.gui.MainWindow">
+<span id="tchelper-gui-mainwindow-module"></span><h2>tchelper.gui.MainWindow module<a class="headerlink" href="#module-tchelper.gui.MainWindow" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tchelper.gui.MainWindow.Ui_MainWindow">
+<em class="property">class </em><code class="descclassname">tchelper.gui.MainWindow.</code><code class="descname">Ui_MainWindow</code><a class="headerlink" href="#tchelper.gui.MainWindow.Ui_MainWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="tchelper.gui.MainWindow.Ui_MainWindow.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>MainWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.MainWindow.Ui_MainWindow.retranslateUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tchelper.gui.MainWindow.Ui_MainWindow.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>MainWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.MainWindow.Ui_MainWindow.setupUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tchelper.gui.OutlineWindow">
+<span id="tchelper-gui-outlinewindow-module"></span><h2>tchelper.gui.OutlineWindow module<a class="headerlink" href="#module-tchelper.gui.OutlineWindow" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tchelper.gui.OutlineWindow.Ui_OutlineWindow">
+<em class="property">class </em><code class="descclassname">tchelper.gui.OutlineWindow.</code><code class="descname">Ui_OutlineWindow</code><a class="headerlink" href="#tchelper.gui.OutlineWindow.Ui_OutlineWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="tchelper.gui.OutlineWindow.Ui_OutlineWindow.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>OutlineWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.OutlineWindow.Ui_OutlineWindow.retranslateUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tchelper.gui.OutlineWindow.Ui_OutlineWindow.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>OutlineWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.OutlineWindow.Ui_OutlineWindow.setupUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tchelper.gui.icons_rc">
+<span id="tchelper-gui-icons-rc-module"></span><h2>tchelper.gui.icons_rc module<a class="headerlink" href="#module-tchelper.gui.icons_rc" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="tchelper.gui.icons_rc.qCleanupResources">
+<code class="descclassname">tchelper.gui.icons_rc.</code><code class="descname">qCleanupResources</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.icons_rc.qCleanupResources" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tchelper.gui.icons_rc.qInitResources">
+<code class="descclassname">tchelper.gui.icons_rc.</code><code class="descname">qInitResources</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tchelper.gui.icons_rc.qInitResources" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-tchelper.gui">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tchelper.gui" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tchelper.gui.resource.html" class="btn btn-neutral float-right" title="tchelper.gui.resource package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tchelper.html" class="btn btn-neutral float-left" title="tchelper package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Joel Montes de Oca
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
