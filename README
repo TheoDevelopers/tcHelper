@@ -16,3 +16,7 @@ Development
 -----------
 tcHelper is being actively developed and is still in its early stages. Check
 back every few weeks to keep an eye on the progress.
+
+.. image:: https://readthedocs.org/projects/tchelper/badge/?version=latest
+:target: https://tchelper.readthedocs.io/en/latest/?badge=latest
+:alt: Documentation Status
