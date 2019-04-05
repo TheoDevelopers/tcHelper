@@ -1,0 +1,29 @@
+.
+├── dir_tree.txt
+├── docs
+│   ├── _build
+│   ├── conf.py
+│   ├── content.rst
+│   ├── index.rst
+│   ├── make.bat
+│   ├── Makefile
+│   ├── manual
+│   ├── requirements.txt
+│   └── source
+├── LICENSE
+├── New_Database.tcd
+├── Pipfile
+├── Pipfile.lock
+├── README.rst
+├── tchelper
+│   ├── config.ini
+│   ├── configr.py
+│   ├── db.py
+│   ├── gui
+│   ├── __init__.py
+│   └── tchelper.py
+└── test
+    ├── __init__.py
+    └── test_configr.py
+
+7 directories, 19 files

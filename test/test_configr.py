@@ -35,3 +35,4 @@ def test_file_exist(mock_isfile, mock_access, isfile, access, result):
 
     filename = 'anyfile.ini'
     assert Configr.file_exist(filename) == result
+
