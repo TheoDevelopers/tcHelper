@@ -1,4 +1,6 @@
 import configparser
+import os
+import os.path
 
 
 class Configr:
@@ -12,45 +14,30 @@ class Configr:
     config_file_location = 'config.ini'
 
     @staticmethod
-    def file_exist(loc = config_file_location):
-        """Test to make sure the file exists and is not write protected.
+    def file_exist(filename):
+        """Tests *filename* to make sure it's an actual file with write and read access.
 
-        Tests to make sure the file exists and can be written to. If the
-        file does not exists or can't be access, possibly due to write protection
-        the method will display an error and exit completely.
+        Tests to make sure *filename* exists, can be read, and written to. If one of the three conditions fail,
+        *file_exist()* returns *False* otherwise it returns *True*.
 
-        :param loc: location for the database. Defaults to the config_file_location if no arguments are passed.
-        :type loc: str
+        :param filename: location for the file to be tested.
+        :type filename: str
 
-        :return: Return 'True' if file exists and isn't write protected.
+        :return: Return *True* if file exists, can be read, and can be written to.
         :rtype: Bool
 
-        .. todo: Implement a elegant to exit when file is not accessible.
+        .. todo: update docstrings
         """
 
-        # Testing the file with exceptions rather than os.access() due to security risk.
-        # Source: https://docs.python.org/3.4/library/os.html#os.X_OK
-        try:
-            open(loc)
+        if os.path.isfile(filename) == False:
+            return False
+        elif os.access(filename, os.W_OK) == False:
+            return False
+        elif os.access(filename, os.R_OK) == False:
+            return False
+        else:
+            return True
 
-        except FileNotFoundError:
-            print("-" * 80)
-            print("The config.ini file was not found.")
-            print("-" * 80)
-            print("Something may have gone wrong with the installation.\n"
-                  "Make sure the config.ini file is located in the "
-                  "application's root directory.")
-            quit()
-
-        except PermissionError:
-            print("-" * 80)
-            print("Permission problem.")
-            print("-" * 80)
-            print("You do not have sufficient permission for the config.ini file.")
-            print("Fix the problem then run {} again.".format(name))
-            quit()
-
-        return True
 
     def get_value(self, section, key):
         """
