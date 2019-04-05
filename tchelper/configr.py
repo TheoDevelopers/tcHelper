@@ -11,7 +11,7 @@ class Configr:
     :var config_file_location: The location of the config.ini file which by default should reside in the root directory of tcHelper.py.
     """
 
-    config_file_location = 'config.ini'
+    config_file_location = 'config.ini'  # The default location for the configuration file.
 
     @staticmethod
     def file_exist(filename):
@@ -46,6 +46,8 @@ class Configr:
         Use `get_value()` when you want to get the key for an
         option from `config.ini`.
 
+        .. todo:: If config file does not exist, raise exception.
+
         :param section: The section within config.ini.
         :param key: The key of a section that its value will be returned.
         :type section: str
@@ -71,6 +73,8 @@ class Configr:
             config = configparser.ConfigParser()
             config.read(Configr.config_file_location)
             return config[section][key]
+        else:
+            return False
 
     def change_value(self, section, key, value):
         """Method for changing the key of an option in `config.ini`.

@@ -36,3 +36,14 @@ def test_file_exist(mock_isfile, mock_access, isfile, access, result):
     filename = 'anyfile.ini'
     assert Configr.file_exist(filename) == result
 
+@mock.patch('tchelper.configr.Configr.file_exist')
+@mock.patch('tchelper.configr.configparser.ConfigParser.read')
+def test_get_value(mock_file_exist, mock_read):
+
+    mock_file_exist.return_value = True
+
+    section = 'sec'
+    key = 'key'
+
+    config = Configr()
+    config.get_value(section, key)
