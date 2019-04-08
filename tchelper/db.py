@@ -7,6 +7,9 @@ class DB:
     The DB module provides an interface to the project's SQLite3 database.
 
     :var db_location: The location of the database as recorded in the `config.ini` file.
+
+    .. Warning:: This module is undergoing refactoring. Many of the methods will be
+    changing.
     """
 
     db_location = 'did not update'
@@ -122,6 +125,10 @@ class DB:
 
         The column and value strings must be placed in a tuple.
 
+        .. Warning:: The value list that is passed into the method is automatically
+        converted into a string regardless if it's another data type such as
+        an int, float, or bool.
+
         :Example:
         >>> item = DB()
         >>> item.add_item('Table_name', ('col1', 'col2'), ('val1', 'val2')
@@ -131,11 +138,6 @@ class DB:
         +-------------+------+------+
         |     row 1   | val1 | val2 |
         +-------------+------+------+
-
-        Known Problems:
-        The value list that is passed into the method is automatically
-        converted into a string regardless if it's another data type such as
-        an int, float, or bool.
 
         :param table: The table that will be written to.
         :param column: The column(s) that will be passed to the database.
