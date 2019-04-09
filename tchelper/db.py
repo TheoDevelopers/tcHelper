@@ -206,20 +206,6 @@ class DB:
                                                            ID=row_id)
         return self.return_sql(sql)
 
-    def return_pass_sql(self, sql):
-        """
-        Returns the item the user requested.
-
-        .. WARNING:: This method will be replaced with `return_sql()`
-
-        :param sql: the SQL code that is passed to return_sql()
-        """
-
-        command = "{}".format(sql)
-
-        data = DB.return_sql(None, command)
-        return data
-
     def delete_data(self):
         """
         Method to delete record from the database.
