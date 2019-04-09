@@ -2,6 +2,7 @@ import sqlite3
 from PySide2 import QtWidgets
 from .configr import Configr
 
+
 class DB:
     """
     The DB module provides an interface to the project's SQLite3 database.
@@ -13,7 +14,6 @@ class DB:
     """
 
     db_location = 'did not update'
-
 
     @staticmethod
     def get_path():
@@ -123,36 +123,18 @@ class DB:
         """
         Takes an item and adds it to the database.
 
-        The column and value strings must be placed in a tuple.
+        Inserts a single row into the database useing the
+        column(s) and value(s) passed in. The column(s) and
+        value(s) must be in a tuple.
 
-        .. Warning:: The value list that is passed into the method is automatically
-        converted into a string regardless if it's another data type such as
-        an int, float, or bool.
-
-        :Example:
-        >>> item = DB()
-        >>> item.add_item('Table_name', ('col1', 'col2'), ('val1', 'val2')
-
-        +-------------+------+------+
-        |  Table_Name | col1 | col2 |
-        +-------------+------+------+
-        |     row 1   | val1 | val2 |
-        +-------------+------+------+
-
-        :param table: The table that will be written to.
-        :param column: The column(s) that will be passed to the database.
-        :param value: The value(s) that will be passed to the database.
+        :param table: The table name that the item will be added to
+        :param column: The column(s) needed
+        :param value: The value(s) that will be added
+        :type table: str
+        :type column: tuple
+        :type value: tuple
         """
-
-        value = (value,)
-        list_column = ', '.join(column)
-        # Convert each value into a string. Join requires strings.
-        list_value = "', '".join(str(v) for v in value)
-
-        sql = """INSERT INTO {table} ({column}) VALUES {values}""".format(
-            table=table,  # adds ' ' to values.
-            column=list_column,
-            values=list_value)
+        sql = f'INSERT INTO {table} {column} VALUES {value}'
 
         DB.commit_sql(None, sql)
 
@@ -162,17 +144,18 @@ class DB:
 
         Return the total number if entries, or rows, in a table.
 
-        :param table: The table that needs to be counted.
+        .. Note:: The row number is returned as a string. The returned count is then converted to an int.
+
+        :param table: The table that will be counted
+        :param visible: Count only rows with visibility = True or visibility = False
+        :return: The number of rows
         :type table: str
-        :param visible: Determines if only visible items are counted. The default only counts visible entries in the table.
         :type visible: bool
-        :return: The total number of rows in the table.
         :rtype: int
         """
 
         if visible:
-            sql = """SELECT Count(*) FROM {Table} WHERE visibility="True"
-                  """.format(Table=table)
+            sql = f'SELECT count(*) FROM {table} WHERE visibility = True'
             count = self.return_sql(sql)
             return int(count[0][0])
         else:
