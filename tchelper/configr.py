@@ -38,7 +38,6 @@ class Configr:
         else:
             return True
 
-
     def get_value(self, section, key):
         """
         Return the value of a key in config.ini.
@@ -69,12 +68,22 @@ class Configr:
         '/foo/database.thd'
         """
 
-        if Configr.file_exist():
+        if Configr.file_exist(Configr.config_file_location):
             config = configparser.ConfigParser()
             config.read(Configr.config_file_location)
             return config[section][key]
         else:
             return False
+
+    def get_value_2(self, section, key):
+        """
+        A method only for testing
+
+        """
+
+        config = configparser.ConfigParser()
+        config.read(Configr.config_file_location)
+        return config[section, key]
 
     def change_value(self, section, key, value):
         """Method for changing the key of an option in `config.ini`.
