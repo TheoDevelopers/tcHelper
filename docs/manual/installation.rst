@@ -18,9 +18,9 @@ being developed, follow the following instructions.
 Dependencies
 ------------
 
--  `pySide`_ - pySide is used as the user interface framework and must
-   be installed on your system for tcHelper to run. pySide can be
-   downloaded from `here`_.
+-  `pySide2`_ - pySide2 is used as the user interface framework and must
+   be installed on your system for tcHelper to run. pySide2 can be
+   installed by `pip install PySide2`.
 
 pipenv
 ~~~~~~~
@@ -73,8 +73,7 @@ Debian
 Once that is installed, run ``python3 main.py`` and tcHelper will
 run.
 
-.. _pySide: http://qt-project.org/wiki/PySide
-.. _here: http://qt-project.org/wiki/Category:LanguageBindings::PySide::Downloads
+.. _pySide: https://wiki.qt.io/Qt_for_Python
 .. _tcHelper website: https://theodevelopers.github.io/tcHelper/
 .. _pipenv documentation: https://pipenv.readthedocs.io/en/latest/
 .. _Python3: https://www.python.org/downloads/
