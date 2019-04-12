@@ -121,4 +121,4 @@ class Configr:
 
 
 if __name__ == '__main__':
-    print(f'{__name__} is not a script.')
+    print(f'{__name__} is not a script. Do not run directly.')

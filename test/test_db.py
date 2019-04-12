@@ -1,4 +1,3 @@
-from tchelper.db import DB
 import tchelper.db
 from unittest import mock
 import pytest

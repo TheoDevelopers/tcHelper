@@ -3,7 +3,6 @@ Test file for configr module
 
 """
 from tchelper.configr import Configr
-import tchelper.configr
 from unittest import mock
 import pytest
 
