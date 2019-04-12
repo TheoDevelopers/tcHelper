@@ -73,7 +73,7 @@ Debian
 Once that is installed, run ``python3 main.py`` and tcHelper will
 run.
 
-.. _pySide: https://wiki.qt.io/Qt_for_Python
+.. _pySide2: https://wiki.qt.io/Qt_for_Python
 .. _tcHelper website: https://theodevelopers.github.io/tcHelper/
 .. _pipenv documentation: https://pipenv.readthedocs.io/en/latest/
 .. _Python3: https://www.python.org/downloads/
