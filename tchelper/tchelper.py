@@ -1,9 +1,7 @@
 #!/usr/bin/env python3.7
 from PySide2 import QtWidgets
-from PySide2.QtWidgets import QApplication
-from .configr import Configr
-from .db import DB
-from gui import MainWindow
+from configr import Configr
+from db import DB
 
 
 def main():
@@ -15,7 +13,7 @@ def main():
 
         QtWidgets.QApplication()
         file_name = QtWidgets.QFileDialog.getSaveFileName(None, "Save New Database", "New_Database.tcd",
-                                                         "tcHelper Database *.tcd")
+                                                          "tcHelper Database *.tcd")
         # TODO: Doesn't work, need to be fixed
         if file_name == '':
             print('Please run tcHelper again and select a location to save the database')

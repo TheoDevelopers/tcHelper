@@ -1,6 +1,5 @@
 import sqlite3
-from PySide2 import QtWidgets
-from .configr import Configr
+from configr import Configr
 
 
 class DB:

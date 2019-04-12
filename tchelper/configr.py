@@ -119,3 +119,6 @@ class Configr:
             con.write(file)
         file.close()
 
+
+if __name__ == '__main__':
+    print(f'{__name__} is not a script.')
