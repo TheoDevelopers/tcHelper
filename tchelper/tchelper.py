@@ -1,7 +1,6 @@
 #!/usr/bin/env python3.7
 from PySide2 import QtWidgets
-from configr import Configr
-from db import DB
+from .configr import Configr
 
 
 def main():
