@@ -19,10 +19,10 @@ tchelper.configr module
     :undoc-members:
     :show-inheritance:
 
-tchelper.db module
-------------------
+tchelper.database module
+------------------------
 
-.. automodule:: tchelper.db
+.. automodule:: tchelper.database
     :members:
     :undoc-members:
     :show-inheritance:
