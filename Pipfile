@@ -12,6 +12,7 @@ flake8 = "*"
 
 [packages]
 pyside2 = "*"
+sqlalchemy = "*"
 
 [requires]
 python_version = "3.7"
