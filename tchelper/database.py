@@ -14,7 +14,7 @@ class Schedule(Base):
     __tablename__ = 'schedule'
 
     id = Column(Integer, primary_key=True)
-    """Primary key for the *schedule table. (int)"""
+    """Primary key for the *schedule* table. (int)"""
 
     brother = Column(Integer, ForeignKey('brother.id'), nullable=False)
     """Foreign key of the brother (int)"""
@@ -109,11 +109,13 @@ class Congregation(Base):
 
     email = Column(String(250), nullable=True)
     """
-    .. Note:: The ability to have an email address for the congregation PTC & an email address for emailing scriptures and/or pictures in the near future.
+    .. note:: The ability to have an email address for the congregation PTC & an email address for emailing scriptures and/or pictures in the near future.
     The email address for the congregation.
+    
     This might be the email address for the PTC or the email address used to email scriptures or
     images for the talks. (string)
     """
+
     street = Column(String(250), nullable=False)
     """The street address for the Kingdom hall where the congregation meets. (string)"""
 
