@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'MainWindow.ui',
 # licensing of 'MainWindow.ui' applies.
 #
-# Created: Tue Apr  2 23:30:08 2019
+# Created: Sun Apr 14 22:43:58 2019
 #      by: pyside2-uic  running on PySide2 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -129,4 +129,4 @@ class Ui_MainWindow(object):
         self.actionTalks.setText(QtWidgets.QApplication.translate("MainWindow", "talks", None, -1))
         self.actionTalks.setToolTip(QtWidgets.QApplication.translate("MainWindow", "List of talk outlines", None, -1))
 
-from . import icons_rc
+import gui.icons_rc
