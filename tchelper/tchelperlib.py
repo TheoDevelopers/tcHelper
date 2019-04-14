@@ -1,13 +1,13 @@
-class Brother :
+class Brother:
     """
     Brother class that defines a person.
 
     """
 
-    def __init__(self, id, first, middle,
-                 last, phone1, phone2=None, congregation,
-                 responsibility, speaker, chairman,
-                 coordinator, note=None, visibility=True):
+    def __init__(self, id, first, middle, last, phone1,
+                 congregation, responsibility, speaker,
+                 chairman, coordinator, phone2=None,
+                 note=None, visibility=True):
         """
         Init the brother object.
 
@@ -53,7 +53,7 @@ class Brother :
         self.note = note
         self.visibility = visibility
 
-    def setFullName (self, first, middle, last) :
+    def setFullName (self, first, middle, last):
         """
         Sets/change the name of the brother
 

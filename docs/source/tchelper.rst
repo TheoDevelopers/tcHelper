@@ -35,6 +35,14 @@ tchelper.tchelper module
     :undoc-members:
     :show-inheritance:
 
+tchelper.tchelperlib module
+---------------------------
+
+.. automodule:: tchelper.tchelperlib
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------

@@ -2,6 +2,7 @@
 from PySide2 import QtWidgets
 from configr import Configr
 from database import InitDB
+from tchelper import Brother
 
 
 def main():
