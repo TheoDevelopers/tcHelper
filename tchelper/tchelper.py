@@ -1,8 +1,8 @@
 #!/usr/bin/env python3.7
 from PySide2 import QtWidgets
 from configr import Configr
-from database import InitDB
-from tchelper import Brother
+from database import DB
+from tchelperlib import Brother
 
 
 def main():
@@ -23,9 +23,8 @@ def main():
         config_file.setValue('DB', 'location', file_name[0])
         config_file.setValue('APP', 'first_time_running', 'False')
 
-        db = InitDB()
+        db = DB()
         db.setDB(file_name[0])
-
 
 
 
