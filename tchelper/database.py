@@ -211,7 +211,9 @@ class DB:
     def setDB(self, file):
         """
         Sets up the new Database
+
         :param file: The location where the database will be saved to.
+        :type file: str
         """
 
         engine = create_engine(f"sqlite:///{file}", echo=True)
