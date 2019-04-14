@@ -203,5 +203,22 @@ class SpeakerOut(Base):
     """Foreign key of the brother who will be going out to give the talk. (int)"""
 
 
+class DB:
+    """
+    Initialize a new database
+    """
+
+    def setDB(self, file):
+        """
+        Sets up the new Database
+        :param file: The location where the database will be saved to.
+        """
+
+        engine = create_engine(f"sqlite:///{file}", echo=True)
+
+        global Base
+        Base.metadata.create_all(engine)
+
+
 if __name__ == '__main__':
     print(f'{__name__} is not a script.')

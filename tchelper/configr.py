@@ -38,7 +38,7 @@ class Configr:
         else:
             return True
 
-    def get_value(self, section, key):
+    def getValue(self, section, key):
         """
         Return the value of a key in config.ini.
 
@@ -63,8 +63,8 @@ class Configr:
         +-----------+-----------+-------------------+
 
         >>> config = Configr()
-        >>> config.change_value('DB', 'location', '/foo/database.thd')
-        >>> config.get_value('DB', 'location')
+        >>> config.setValue('DB', 'location', '/foo/database.thd')
+        >>> config.getValue('DB', 'location')
         '/foo/database.thd'
         """
 
@@ -85,10 +85,10 @@ class Configr:
         config.read(Configr.config_file_location)
         return config[section, key]
 
-    def change_value(self, section, key, value):
+    def setValue(self, section, key, value):
         """Method for changing the key of an option in `config.ini`.
 
-        Use `change_value()` when you need to edit an option in config.ini
+        Use `setValue()` when you need to edit an option in config.ini
 
         :param section: The section within config.ini that contain the option to be changed.
         :param key: The within the section option that is to be changed.
@@ -105,8 +105,8 @@ class Configr:
         +-----------+-----------+-------------------+
 
         >>> config = Configr()
-        >>> config.change_value('DB', 'location', '/foo/config.ini')
-        >>> config.get_value('DB', 'location')
+        >>> config.setValue('DB', 'location', '/foo/config.ini')
+        >>> config.getValue('DB', 'location')
         '/foo/config.ini'
         """
 

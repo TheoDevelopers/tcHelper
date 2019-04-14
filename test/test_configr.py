@@ -45,6 +45,6 @@ def test_file_exist(mock_isfile, mock_access, isfile, access, result):
 #                                           "first_time = NO"
 #     # mock_ConfigParser.get.return_value = {'section': {'key': 'test'}}
 #     config = Configr()
-#     value = config.get_value('APP', 'first_time')
+#     value = config.getValue('APP', 'first_time')
 #
 #     assert value == 'NO'
