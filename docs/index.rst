@@ -8,6 +8,7 @@ Welcome to tcHelper's documentation!
 
 What is tcHelper?
 -----------------
+
 tcHelper is a program to aid public talk coordinators, PTC, in the congregations
 of Jehovah's Witness. It is written in Python3 and uses the Qt GUI framework
 (PySide2) and SQLite3 for its database, all of which are open source and cross
@@ -22,11 +23,12 @@ programs that interact with tcHelper.
 
 Development
 -----------
+
 tcHelper is being actively developed and is still in its early stages. Check
 back every few weeks to keep an eye on the progress.
 
 Table of Content
-================
+----------------
 
 .. toctree::
    :maxdepth: 3
@@ -36,7 +38,7 @@ Table of Content
    /manual/installation
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`

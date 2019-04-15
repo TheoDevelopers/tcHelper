@@ -11,38 +11,13 @@ Subpackages
 Submodules
 ----------
 
-tchelper.configr module
------------------------
+.. toctree::
 
-.. automodule:: tchelper.configr
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-tchelper.database module
-------------------------
-
-.. automodule:: tchelper.database
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-tchelper.tchelper module
-------------------------
-
-.. automodule:: tchelper.tchelper
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-tchelper.tchelperlib module
----------------------------
-
-.. automodule:: tchelper.tchelperlib
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
+   tchelper.config
+   tchelper.database
+   tchelper.mainWindow
+   tchelper.tchelper
+   tchelper.tchelperlib
 
 Module contents
 ---------------

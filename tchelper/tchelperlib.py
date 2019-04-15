@@ -53,7 +53,7 @@ class Brother:
         self.note = note
         self.visibility = visibility
 
-    def setFullName (self, first, middle, last):
+    def setFullName(self, first, middle, last):
         """
         Sets/change the name of the brother
 
@@ -95,3 +95,7 @@ class Brother:
         :param lastName: The last name of the brother to be set or changed
         :type lastName: str
         """
+
+
+if __name__ == '__main__':
+    print(f'{__name__} is not a script.')
