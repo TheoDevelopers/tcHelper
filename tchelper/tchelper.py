@@ -1,16 +1,51 @@
 #!/usr/bin/env python3.7
 from PySide2 import QtWidgets
 from configr import Configr
-from database import DB
 from tchelperlib import Brother
+import database
+
+
+def check_first_run():
+    """
+    Return `True` if it's the first time tcHelper runs.
+    :return:
+    """
+
+    file = Configr()
+    return bool(file.getValue("APP", "first_time_running"))
+
+def set_first_run(set):
+    """
+    Sets `False` in `[APP]: first_time_running` to mark that the tcHelper program has run before.
+
+    :param set: The value to set *first_time_running*
+    :type set: str
+    """
+
+    file = Configr()
+    file.setValue('APP', 'first_time_running', set)
+
+
+def set_database_location(location):
+    """
+    Sets the location of the database in config.ini
+
+    :param location: The location of the database
+    :type location: str
+    :return:
+    """
+
+    file = Configr()
+    file.setValue('DB', 'location', location)
 
 
 def main():
     """
     Entry point for the tcHelper program.
     """
-    config_file = Configr()
-    if config_file.getValue('APP', 'first_time_running') == 'True':
+
+
+    if check_first_run():
 
         QtWidgets.QApplication()
         file_name = QtWidgets.QFileDialog.getSaveFileName(None, "Save New Database", "New_Database.tcd",
@@ -20,13 +55,11 @@ def main():
             print('Please run tcHelper again and select a location to save the database')
             quit()
 
-        config_file.setValue('DB', 'location', file_name[0])
-        config_file.setValue('APP', 'first_time_running', 'False')
+        set_database_location(file_name[0])
+        set_first_run('False')
 
-        db = DB()
-        db.setDB(file_name[0])
-
-
+        db = database.DB()
+        db.initDB()
 
 
     else:

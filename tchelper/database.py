@@ -1,8 +1,21 @@
 from sqlalchemy import Column, ForeignKey, Integer, String, Boolean, Date
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
+from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
+from configr import Configr
 
+
+
+db_location = Configr()
+file_location = db_location.getValue('DB', 'location')
+
+# engine = create_engine(f"sqlite:///{db_location}", echo=True)
+
+
+engine = create_engine(f'sqlite:///{file_location}', echo=True)
+Session = sessionmaker(bind=engine)
+session = Session()
 
 Base = declarative_base()
 
@@ -32,7 +45,8 @@ class Schedule(Base):
     """Foreign ket for the group that has hospitality. (int)"""
 
     date = Column(Date, nullable=False)
-    """Date of the schedule. (`date <https://docs.sqlalchemy.org/en/latest/core/type_basics.html#sqlalchemy.types.Date>`_)"""
+    """Date of the schedule. 
+    (`date <https://docs.sqlalchemy.org/en/latest/core/type_basics.html#sqlalchemy.types.Date>`_)"""
 
 
 class Brother(Base):
@@ -205,23 +219,55 @@ class SpeakerOut(Base):
     """Foreign key of the brother who will be going out to give the talk. (int)"""
 
 
+
 class DB:
     """
     Initialize a new database
     """
 
-    def setDB(self, file):
+    @staticmethod
+    def dbFile():
         """
-        Sets up the new Database
+        Returns the location of the database as recorded in the config.ini file.
+
+        :return: The location of the database file
+        :rtype: str
+        """
+
+        confgiFile = Configr()
+        return confgiFile.getValue('DB', 'location')
+
+
+    def initDB(self):
+        """
+        Sets up the new Database.
+
+        Takes the location of the created database from the config.ini file. It retrieves this location
+        by running the method `DB.dbFile()`.
 
         :param file: The location where the database will be saved to.
         :type file: str
         """
 
-        engine = create_engine(f"sqlite:///{file}", echo=True)
+
+        engine = create_engine(f"sqlite:///{DB.dbFile()}", echo=True)
 
         global Base
         Base.metadata.create_all(engine)
+
+
+    def addItem(self, object):
+        """
+        Adds a record to the database.
+
+        :param object: The table class object to be written
+        :type object: object
+        """
+
+        self.object = object
+
+        session.add(object)
+        session.commit()
 
 
 if __name__ == '__main__':

@@ -9,10 +9,12 @@ sphinx = "*"
 sphinx-rtd-theme = "*"
 autopep8 = "*"
 flake8 = "*"
+pylint = "*"
 
 [packages]
 pyside2 = "*"
 sqlalchemy = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.7"
