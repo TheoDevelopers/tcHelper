@@ -1,5 +1,5 @@
 [![Documentation Status](https://readthedocs.org/projects/tchelper/badge/?version=latest)](https://tchelper.readthedocs.io/en/latest/?badge=latest)
-
+[![Build Status](https://travis-ci.org/TheoDevelopers/tcHelper.svg?branch=master)](https://travis-ci.org/TheoDevelopers/tcHelper)
 
 ## What is tcHelper?
 tcHelper is a program to aid public talk coordinators, PTC, in the congregations of Jehovah's Witness. It is written in Python3.7 and uses the Qt GUI framework (PySide2) and SQLite3 for its database, all of which are open source and cross-platform technologies. Visit the project's wiki for more information. tcHelper grew out of another project called pyTalkManager.
