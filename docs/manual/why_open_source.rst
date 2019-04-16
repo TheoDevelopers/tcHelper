@@ -80,13 +80,13 @@ were unhappy with the state of OpenOffice.org. They took action and
 forked the project. `LibreOffice`_ is now a much better office suite
 than OpenOffice.org has ever been.
 
-More over, what if you love pyTalkManager but wish there were an Android
-and/or iPhone app that can import the pyTalkManager’s database? Since
-pyTalkManager and its tools are open sourced, creating such app isn’t
+More over, what if you love tcHelper but wish there were an Android
+and/or iPhone app that can import the tcHelper’s database? Since
+tcHelper and its tools are open sourced, creating such app isn’t
 only possible but also not difficult.
 
-Perhaps you don’t like pyTalkManager and decide to build another
-application. Create your application and import pyTalkManager’s database
+Perhaps you don’t like tcHelper and decide to build another
+application. Create your application and import tcHelper’s database
 so that your data can be used. It’s very simple.
 
 This and more is all possible with open source software.
