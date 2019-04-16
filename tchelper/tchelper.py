@@ -1,6 +1,6 @@
 #!/usr/bin/env python3.7
 from PySide2 import QtWidgets
-from configr import Configr
+from config import Config
 from tchelperlib import Brother
 import database
 
@@ -11,8 +11,9 @@ def check_first_run():
     :return:
     """
 
-    file = Configr()
+    file = Config()
     return bool(file.getValue("APP", "first_time_running"))
+
 
 def set_first_run(set):
     """
@@ -22,7 +23,7 @@ def set_first_run(set):
     :type set: str
     """
 
-    file = Configr()
+    file = Config()
     file.setValue('APP', 'first_time_running', set)
 
 
@@ -35,7 +36,7 @@ def set_database_location(location):
     :return:
     """
 
-    file = Configr()
+    file = Config()
     file.setValue('DB', 'location', location)
 
 
@@ -43,7 +44,6 @@ def main():
     """
     Entry point for the tcHelper program.
     """
-
 
     if check_first_run():
 
@@ -60,7 +60,6 @@ def main():
 
         db = database.DB()
         db.initDB()
-
 
     else:
         print('RUN GUI')

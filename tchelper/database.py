@@ -3,11 +3,10 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
-from configr import Configr
+from config import Config
 
 
-
-db_location = Configr()
+db_location = Config()
 file_location = db_location.getValue('DB', 'location')
 
 # engine = create_engine(f"sqlite:///{db_location}", echo=True)
@@ -45,7 +44,7 @@ class Schedule(Base):
     """Foreign ket for the group that has hospitality. (int)"""
 
     date = Column(Date, nullable=False)
-    """Date of the schedule. 
+    """Date of the schedule.
     (`date <https://docs.sqlalchemy.org/en/latest/core/type_basics.html#sqlalchemy.types.Date>`_)"""
 
 
@@ -125,7 +124,7 @@ class Congregation(Base):
     """
     .. note:: The ability to have an email address for the congregation PTC & an email address for emailing scriptures and/or pictures in the near future.
     The email address for the congregation.
-    
+
     This might be the email address for the PTC or the email address used to email scriptures or
     images for the talks. (string)
     """
@@ -219,7 +218,6 @@ class SpeakerOut(Base):
     """Foreign key of the brother who will be going out to give the talk. (int)"""
 
 
-
 class DB:
     """
     Initialize a new database
@@ -234,9 +232,8 @@ class DB:
         :rtype: str
         """
 
-        confgiFile = Configr()
+        confgiFile = Config()
         return confgiFile.getValue('DB', 'location')
-
 
     def initDB(self):
         """
@@ -249,12 +246,10 @@ class DB:
         :type file: str
         """
 
-
         engine = create_engine(f"sqlite:///{DB.dbFile()}", echo=True)
 
         global Base
         Base.metadata.create_all(engine)
-
 
     def addItem(self, object):
         """

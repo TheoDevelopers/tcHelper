@@ -3,8 +3,9 @@ import os
 import os.path
 
 
-class Configr:
-    """Wrapper for configparser
+class Config:
+    """
+    Wrapper for configparser
 
     Class that acts as an interface to the `configparser` library for tcHelper.
 
@@ -62,15 +63,15 @@ class Configr:
         |    DB     |  location | /foo/database.thd |
         +-----------+-----------+-------------------+
 
-        >>> config = Configr()
+        >>> config = Config()
         >>> config.setValue('DB', 'location', '/foo/database.thd')
         >>> config.getValue('DB', 'location')
         '/foo/database.thd'
         """
 
-        if Configr.file_exist(Configr.config_file_location):
+        if Config.file_exist(Config.config_file_location):
             config = configparser.ConfigParser()
-            config.read(Configr.config_file_location)
+            config.read(Config.config_file_location)
             return config[section][key]
         else:
             return False
@@ -82,7 +83,7 @@ class Configr:
         """
 
         config = configparser.ConfigParser()
-        config.read(Configr.config_file_location)
+        config.read(Config.config_file_location)
         return config[section, key]
 
     def setValue(self, section, key, value):
@@ -104,13 +105,13 @@ class Configr:
         |    DB     |  location | /foo/database.thd |
         +-----------+-----------+-------------------+
 
-        >>> config = Configr()
+        >>> config = Config()
         >>> config.setValue('DB', 'location', '/foo/config.ini')
         >>> config.getValue('DB', 'location')
         '/foo/config.ini'
         """
 
-        config_loc = Configr.config_file_location
+        config_loc = Config.config_file_location
 
         con = configparser.ConfigParser()
         con.read(config_loc)
