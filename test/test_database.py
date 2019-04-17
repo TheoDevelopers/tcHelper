@@ -10,10 +10,8 @@ def test_imports():
     .. warning:: I am not sure if this is a vaild test. There must be a better way of doing this.
     """
 
-#     try:
-#         from tchelper.config import configparser
-#         from tchelper.config import os
-# #        from tchelper.config import os.path  # Doesn't want to work.
-#     except ModuleNotFoundError as e:
-#         pytest.fail(e, pytrace=True)
-    pass
+    try:
+        import sqlalchemy
+        import config
+    except ModuleNotFoundError as e:
+        pytest.fail(e, pytrace=True)
