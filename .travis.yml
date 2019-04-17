@@ -5,4 +5,4 @@ python :
 install:
     - pip install -r docs/requirements.txt
 script:
-    - pytest
+    - cd tchelper && python -m pytest ../test/ -v
