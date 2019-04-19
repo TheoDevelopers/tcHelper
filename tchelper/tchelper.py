@@ -6,9 +6,11 @@ import database
 
 
 def check_first_run():
-    """
-    Return `True` if it's the first time tcHelper runs.
-    :return:
+    """Return `True` if it's the first time tcHelper runs.
+
+    :return: Value for [APP] [first_time_running]
+    :rtype: bool
+
     """
 
     file = Config()
@@ -16,11 +18,13 @@ def check_first_run():
 
 
 def set_first_run(set):
-    """
+    """Sets the first_run value in config.ini
+
     Sets `False` in `[APP]: first_time_running` to mark that the tcHelper program has run before.
 
     :param set: The value to set *first_time_running*
     :type set: str
+
     """
 
     file = Config()
@@ -28,12 +32,12 @@ def set_first_run(set):
 
 
 def set_database_location(location):
-    """
-    Sets the location of the database in config.ini
+    """Sets the location of the database in config.ini
 
     :param location: The location of the database
     :type location: str
     :return:
+
     """
 
     file = Config()
@@ -41,9 +45,7 @@ def set_database_location(location):
 
 
 def main():
-    """
-    Entry point for the tcHelper program.
-    """
+    """Entry point for the tcHelper program."""
 
     if check_first_run():
 
