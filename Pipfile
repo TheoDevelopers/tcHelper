@@ -10,6 +10,7 @@ sphinx-rtd-theme = "*"
 autopep8 = "*"
 flake8 = "*"
 pylint = "*"
+python-language-server = {extras = ["all"],version = "*"}
 
 [packages]
 pyside2 = "*"
