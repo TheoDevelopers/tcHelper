@@ -8,8 +8,7 @@ class Brother:
                  congregation, responsibility, speaker,
                  chairman, coordinator, phone2=None,
                  note=None, visibility=True):
-        """
-        Init the brother object.
+        """Init the brother object.
 
         :param id: id for the brother
         :param first: First name of the brother
@@ -37,6 +36,7 @@ class Brother:
         :type coordinator: bool
         :type note: str
         :type visibility: bool
+
         """
 
         self.id = id
@@ -54,8 +54,7 @@ class Brother:
         self.visibility = visibility
 
     def setFullName(self, first, middle, last):
-        """
-        Sets/change the name of the brother
+        """Sets/change the name of the brother
 
         :param first: The first name of the brother to be set or changed
         :param middle: The optinal middle name of the brother to be set or changed
@@ -63,37 +62,38 @@ class Brother:
         :type first: str
         :type middle: str
         :type last: str
+
         """
         self.first = first
         self.middle = middle
         self.last = last
 
     def setFirstName(self, firstName):
-        """
-        Sets or changes the first name of the brother
+        """Sets or changes the first name of the brother
 
         :param firstName: The first name of the brother to be set or changed
         :type firstName: str
+
         """
 
         self.first = firstName
 
     def setMiddleName(self, middleName):
-        """
-        Sets or changes the middle name of the brother
+        """Sets or changes the middle name of the brother
 
         :param middleName: The middle name of the brother to be set or changed
         :type middleName: str
+
         """
 
         self.middle = middleName
 
     def setLastName(self, lastName):
-        """
-        Sets or changes the last name of the brother
+        """Sets or changes the last name of the brother
 
         :param lastName: The last name of the brother to be set or changed
         :type lastName: str
+
         """
 
 
