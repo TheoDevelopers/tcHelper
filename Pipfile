@@ -16,6 +16,7 @@ python-language-server = {extras = ["all"],version = "*"}
 pyside2 = "*"
 sqlalchemy = "*"
 pylint = "*"
+pyyaml = "*"
 
 [requires]
 python_version = "3.7"
