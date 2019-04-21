@@ -32,9 +32,3 @@ def test_setValue(write_yaml, mock_safe_load):
     yam.setValue(key, value)
     assert write_yaml.called
     write_yaml.assert_called_with(dict2)
-
-
-def test_write_yaml():
-    """Test the write_yaml function"""
-
-    pass
