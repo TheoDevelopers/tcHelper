@@ -3,11 +3,10 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
-from config import Config
+import yam
 
 
-db_location = Config()
-file_location = db_location.getValue('DB', 'location')
+file_location = yam.getValue('db_location')
 
 # engine = create_engine(f"sqlite:///{db_location}", echo=True)
 
@@ -226,27 +225,25 @@ class DB:
     @staticmethod
     def dbFile():
         """
-        Returns the location of the database as recorded in the config.ini file.
+        Returns the location of the database as recorded in the config.yaml file.
 
         :return: The location of the database file
         :rtype: str
         """
 
-        confgiFile = Config()
-        return confgiFile.getValue('DB', 'location')
+        return yam.getValue('db_location')
 
     def initDB(self):
-        """
-        Sets up the new Database.
+        """Sets up the new Database.
 
-        Takes the location of the created database from the config.ini file. It retrieves this location
-        by running the method `DB.dbFile()`.
+        Takes the location of the created database from the config.yaml file.
 
         :param file: The location where the database will be saved to.
         :type file: str
+
         """
 
-        engine = create_engine(f"sqlite:///{DB.dbFile()}", echo=True)
+        engine = create_engine(f"sqlite:///{yam.getValue('db_location')}", echo=True)
 
         global Base
         Base.metadata.create_all(engine)
