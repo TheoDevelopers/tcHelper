@@ -1,18 +1,18 @@
 #!/usr/bin/env python3.7
-from PySide2 import QtWidgets
-from PySide2.QtUiTools import QUiLoader
-from PySide2.QtWidgets import QApplication, QPushButton, QLineEdit
+from PySide2.QtWidgets import QApplication
+from PySide2 import QtGui
 from PySide2.QtCore import QFile, QObject
-import sys
-import yam
+from PySide2.QtUiTools import QUiLoader
+from PySide2 import QtWidgets
 from tchelperlib import Brother
+import main_window
 import database
+import yam
+import sys
 
 
 def check_first_run():
-    """
-
-    Return **True** if it's the first time tcHelper runs.
+    """Return *True* if it's the first time tcHelper runs.
 
     :return: Value for [APP] [first_time_running]
     :rtype: bool
@@ -47,32 +47,17 @@ def set_database_location(location):
     yam.setValue('db_location', location)
 
 
-class MainWindow(QObject):
-
-    def __init__(self, ui_file, parent=None):
-        super(Form, self).__init__(parent)
-        ui_file = QFile(ui_file)
-        ui_file.open(QFile.ReadOnly)
-
-        loader = QUiLoader()
-        self.window = loader.load(ui_file)
-        ui_file.close()
-
-        self.line = self.window.findChild(QLineEdit, 'lineEdit')
-
-        btn = self.window.findChild(QPushButton, 'pushButton')
-        btn.clicked.connect(self.ok_handler)
-        self.window.show()
-
-
 def main():
     """Entry point for the tcHelper program."""
 
     if check_first_run():
         # Show the Save File QFileDialog
         QtWidgets.QApplication()
-        file_name = QtWidgets.QFileDialog.getSaveFileName(None, "Save New Database", "New_Database.tcd",
+        file_name = QtWidgets.QFileDialog.getSaveFileName(None,
+                                                          "Save New Database",
+                                                          "New_Database.tcd",
                                                           "tcHelper Database *.tcd")
+
         # If user doesn't doesn't enter a file name then print message
         if file_name == '':
             print('Please run tcHelper again and select a location to save the database')
@@ -80,20 +65,14 @@ def main():
 
         set_database_location(file_name[0])
         set_first_run(False)
-        print('RUN GUI')
 
         db = database.DB()
         db.initDB()
 
-    else:
+        main_window.run()
 
-        app = QApplication(sys.argv)
-        file = QFile("gui/MainWindow.ui")
-        file.open(QFile.ReadOnly)
-        loader = QUiLoader()
-        window = loader.load(file)
-        window.show()
-        sys.exit(app.exec_())
+    else:
+        main_window.run()
 
 
 if __name__ == '__main__':
