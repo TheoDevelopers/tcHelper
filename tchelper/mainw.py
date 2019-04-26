@@ -3,6 +3,10 @@
 from PySide2.QtWidgets import QApplication
 from PySide2 import QtWidgets
 import gui.MainWindow  # Generated with QtDesigner
+from brotherw import BrotherWindow
+from databasew import DatabaseWindow
+from congregationw import CongregationWindow
+from outlinew import OutlineWindow
 import sys
 
 
