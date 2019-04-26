@@ -1,14 +1,8 @@
 #!/usr/bin/env python3.7
-from PySide2.QtWidgets import QApplication
-from PySide2 import QtGui
-from PySide2.QtCore import QFile, QObject
-from PySide2.QtUiTools import QUiLoader
 from PySide2 import QtWidgets
-from tchelperlib import Brother
-import main_window
+import mainw
 import database
 import yam
-import sys
 
 
 def check_first_run():
@@ -25,7 +19,8 @@ def check_first_run():
 def set_first_run(value):
     """Sets the first_run value in config.ini
 
-    Sets `False` in `[APP]: first_time_running` to mark that the tcHelper program has run before.
+    Sets `False` in `[APP]: first_time_running` to mark that the tcHelper
+    program has run before.
 
     :param value: The value to set *first_time_running*
     :type value: str
@@ -53,14 +48,19 @@ def main():
     if check_first_run():
         # Show the Save File QFileDialog
         QtWidgets.QApplication()
-        file_name = QtWidgets.QFileDialog.getSaveFileName(None,
-                                                          "Save New Database",
-                                                          "New_Database.tcd",
-                                                          "tcHelper Database *.tcd")
+        file_name = QtWidgets.QFileDialog.getSaveFileName(
+            None,
+            "Save New Database",
+            "New_Database.tcd",
+            "tcHelper Database *.tcd"
+        )
 
-        # If user doesn't doesn't enter a file name then print message
+        #  If user doesn't enter a file name then print message
         if file_name == '':
-            print('Please run tcHelper again and select a location to save the database')
+            print('Please run tcHelper again and \
+            select a location to save the database'
+                  )
+
             quit()
 
         set_database_location(file_name[0])
@@ -69,10 +69,13 @@ def main():
         db = database.DB()
         db.initDB()
 
-        main_window.run()
+        #  Following error when mainw.run() runs:
+        #  RuntimeError: Please destroy the QApplication singleton before
+        #  creating a new QApplication instance.
+        mainw.run()
 
     else:
-        main_window.run()
+        mainw.run()
 
 
 if __name__ == '__main__':

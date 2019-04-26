@@ -2,7 +2,6 @@
 
 from PySide2.QtWidgets import QApplication
 from PySide2 import QtWidgets
-from PySide2 import QtGui
 import gui.MainWindow  # Generated with QtDesigner
 import sys
 
@@ -33,7 +32,7 @@ class MainWindow(QtWidgets.QMainWindow, gui.MainWindow.Ui_MainWindow):
             self.show_outline_window)  # Talk-Outline Manager
 
     def center_on_screen(self):
-        """Center the main window on the user's screen at boot-up."""
+        """Center the main window on the user's screen at boot-up"""
 
         screen_resolution = QtWidgets.QDesktopWidget().screenGeometry()
         center_horizontal = ((screen_resolution.width() / 2) - (self.frameSize().width() / 2))
@@ -41,33 +40,25 @@ class MainWindow(QtWidgets.QMainWindow, gui.MainWindow.Ui_MainWindow):
         self.move(center_horizontal, center_vertical)
 
     def show_database_window(self):
-        """
-        Method that opens the Database manager.
-        """
+        """Method that opens the Database manager"""
 
         self.db_window = DatabaseWindow()
         self.db_window.show()
 
     def show_brother_window(self):
-        """
-        Method that opens the Brother manager.
-        """
+        """Method that opens the Brother manager"""
 
         self.bro_window = BrotherWindow()
         self.bro_window.show()
 
     def show_congregation_window(self):
-        """
-        Method that opens the Congregation manager.
-        """
+        """Method that opens the Congregation manager"""
 
         self.congregation_window = CongregationWindow()
         self.congregation_window.show()
 
     def show_outline_window(self):
-        """
-        Method that opens the List manager.
-        """
+        """Method that opens the List manager"""
 
         self.outline_window = OutlineWindow()
         self.outline_window.show()
