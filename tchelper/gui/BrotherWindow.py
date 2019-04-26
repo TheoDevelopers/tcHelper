@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'BrotherWindow.ui',
 # licensing of 'BrotherWindow.ui' applies.
 #
-# Created: Tue Apr 23 22:38:46 2019
+# Created: Fri Apr 26 00:00:04 2019
 #      by: pyside2-uic  running on PySide2 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -192,14 +192,4 @@ class Ui_BrotherWindow(object):
         self.button_add.setText(QtWidgets.QApplication.translate("BrotherWindow", "Add", None, -1))
         self.button_edit.setWhatsThis(QtWidgets.QApplication.translate("BrotherWindow", "Edit a brother\'s information.", None, -1))
         self.button_edit.setText(QtWidgets.QApplication.translate("BrotherWindow", "Edit", None, -1))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    BrotherWindow = QtWidgets.QDialog()
-    ui = Ui_BrotherWindow()
-    ui.setupUi(BrotherWindow)
-    BrotherWindow.show()
-    sys.exit(app.exec_())
 
