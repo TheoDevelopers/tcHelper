@@ -6,6 +6,8 @@ tcHelper is a program to aid public talk coordinators, PTC, in the congregations
 
 tcHelper differentiates its self from other PTC software in a number of ways. For one, it is an open source project. Also, tcHelper will not be sold or have features that can only be unlocked with donations. Since tcHelper is open source and uses the GPL v.3 license, other PTC software developers can create programs that interact with tcHelper.
 
-## Development 
+## Development
 tcHelper is being actively developed and is still in its early stages. Check
 back every few weeks to keep an eye on the progress.
+
+**tcHelper** is not affiliated with the [Watch Tower Bible and Tract Society of Pennsylvania](https://www.JW.org).
