@@ -5,8 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 import yam
 
-
-file_location = yam.getValue('db_location')
+file_location = yam.get_value('db_location')
 
 # engine = create_engine(f"sqlite:///{db_location}", echo=True)
 
@@ -33,7 +32,8 @@ class Schedule(Base):
     outline = Column(Integer, ForeignKey('outline.id'), nullable=False)
     """Foreign key of the outline to be given. (int)"""
 
-    congregation = Column(Integer, ForeignKey('congregation.id'), nullable=False)
+    congregation = Column(Integer, ForeignKey('congregation.id'),
+                          nullable=False)
     """Foreign key of the congregation of the speaker coming or going to give the talk. (int)"""
 
     chairman = Column(Integer, ForeignKey('brother.id'), nullable=False)
@@ -78,7 +78,8 @@ class Brother(Base):
     phone2 = Column(String(20), nullable=True)
     """Secendary phone number for the brother. Not required. (string)"""
 
-    congregation = Column(Integer, ForeignKey('congregation.id'), nullable=False)
+    congregation = Column(Integer, ForeignKey('congregation.id'),
+                          nullable=False)
     """Foreign key of the congregation the brother belongs to. (int)"""
 
     responsibility = Column(String(20), nullable=False)
@@ -231,7 +232,7 @@ class DB:
         :rtype: str
         """
 
-        return yam.getValue('db_location')
+        return yam.get_value('db_location')
 
     def initDB(self):
         """Sets up the new Database.
@@ -243,7 +244,8 @@ class DB:
 
         """
 
-        engine = create_engine(f"sqlite:///{yam.getValue('db_location')}", echo=True)
+        engine = create_engine(f"sqlite:///{yam.get_value('db_location')}",
+                               echo=True)
 
         global Base
         Base.metadata.create_all(engine)

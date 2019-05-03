@@ -19,7 +19,7 @@ def write_yaml(config):
     return True
 
 
-def getValue(key):
+def get_value(key):
     """Returns the value for the key"""
 
     dict = yaml.safe_load(open_config_file())
@@ -28,7 +28,7 @@ def getValue(key):
     return value
 
 
-def setValue(key, value):
+def set_value(key, value):
     """Sets a key value
     Takes the key and value and saves it to config.yaml.
 
