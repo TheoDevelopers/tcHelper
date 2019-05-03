@@ -1,6 +1,6 @@
 import pytest
-from tchelper.database import DB
-from tchelper.config import Config
+from scr.database import DB
+from scr.config import Config
 
 
 pass

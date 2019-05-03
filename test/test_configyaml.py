@@ -17,7 +17,7 @@ def test_config():
 
     hash_original = '38d32794bb34ffee29b2a81c68e9d71d'
 
-    file = '../tchelper/config.yaml'
+    file = '../scr/config.yaml'
     with open(file, 'rb') as f:
         config_file = f.read()
 

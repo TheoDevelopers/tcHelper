@@ -1,13 +1,13 @@
 """Tests for the yam module"""
 
-import tchelper.yam as yam
+import scr.yam as yam
 from unittest import mock
 
 dict1 = {'first_run': True, 'db_location': '/test/test.db'}
 dict2 = {'first_run': False, 'db_location': '/test/test.db'}
 
 
-@mock.patch('tchelper.yam.yaml.safe_load')
+@mock.patch('scr.yam.yaml.safe_load')
 def test_getValue(mock_safe_load):
     """Test the getValue function"""
 
@@ -20,8 +20,8 @@ def test_getValue(mock_safe_load):
     assert data2 == '/test/test.db'
 
 
-@mock.patch('tchelper.yam.yaml.safe_load')
-@mock.patch('tchelper.yam.write_yaml')
+@mock.patch('scr.yam.yaml.safe_load')
+@mock.patch('scr.yam.write_yaml')
 def test_setValue(write_yaml, mock_safe_load):
     """Tests the setValue function"""
 
