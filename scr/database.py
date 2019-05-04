@@ -5,7 +5,11 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 import yam
 
+<<<<<<< HEAD:scr/database.py
 file_location = yam.get_value('db_location')
+=======
+file_location = yam.getValue('db_location')
+>>>>>>> master:scr/database.py
 
 # engine = create_engine(f"sqlite:///{db_location}", echo=True)
 
@@ -244,7 +248,11 @@ class DB:
 
         """
 
+<<<<<<< HEAD:scr/database.py
         engine = create_engine(f"sqlite:///{yam.get_value('db_location')}",
+=======
+        engine = create_engine(f"sqlite:///{yam.getValue('db_location')}",
+>>>>>>> master:scr/database.py
                                echo=True)
 
         global Base

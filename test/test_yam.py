@@ -22,8 +22,13 @@ def test_getValue(mock_safe_load):
 
 @mock.patch('scr.yam.yaml.safe_load')
 @mock.patch('scr.yam.write_yaml')
+<<<<<<< HEAD
 def test_set_value(write_yaml, mock_safe_load):
     """Tests the set_value function"""
+=======
+def test_setValue(write_yaml, mock_safe_load):
+    """Tests the setValue function"""
+>>>>>>> master
 
     mock_safe_load.return_value = dict1
     key = 'first_run'
