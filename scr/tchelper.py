@@ -13,7 +13,7 @@ def check_first_run():
 
     """
 
-    return yam.getValue('first_run')
+    return yam.get_value('first_run')
 
 
 def set_first_run(value):
@@ -23,11 +23,11 @@ def set_first_run(value):
     program has run before.
 
     :param value: The value to set *first_time_running*
-    :type value: str
+    :type value: bool
 
     """
 
-    yam.setValue('first_run', value)
+    yam.set_value('first_run', value)
 
 
 def set_database_location(location):
@@ -39,7 +39,7 @@ def set_database_location(location):
 
     """
 
-    yam.setValue('db_location', location)
+    yam.set_value('db_location', location)
 
 
 def main():
