@@ -73,3 +73,4 @@ fabric.properties
 
 # Coverage test tool
 scr/.coverage
+test/__pycache__/
