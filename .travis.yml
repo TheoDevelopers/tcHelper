@@ -6,4 +6,4 @@ install:
     - 'pip install pipenv'
     - 'pipenv install'
 script:
-    - cd tchelper && python -m pytest ../test/ -v
+    - cd scr && python -m pytest ../test/ -v
