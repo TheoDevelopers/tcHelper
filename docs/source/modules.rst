@@ -1,7 +1,7 @@
-tchelper
-========
+scr
+===
 
 .. toctree::
    :maxdepth: 4
 
-   tchelper
+   scr
