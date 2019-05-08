@@ -31,11 +31,12 @@ Table of Content
 ----------------
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Contents
 
-   /manual/why_open_source
    /manual/installation
+   /manual/development
+   /manual/why_open_source
 
 Indices and tables
 ------------------
