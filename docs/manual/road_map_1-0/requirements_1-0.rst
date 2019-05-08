@@ -39,6 +39,14 @@ congregations
     - Time the meeting begins.
 - prevent duplicate congregations from being added.
 
+outlines
+~~~~~~~~
+- allow the user to add, edit, and delete outlines.
+- keep track of outlines' ...
+    - number
+    - title
+- prevent user from adding a duplicate outline number and/or title.
+
 schedules
 ~~~~~~~~~
 - allow the user to see, add, edit, remove schedules indefinitely into the future.
