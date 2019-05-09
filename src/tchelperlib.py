@@ -1,8 +1,7 @@
-class Brother:
-    """
-    Brother class that defines a person.
+import database as db
 
-    """
+class Brother:
+    """Brother class that defines a person."""
 
     def __init__(self, id, first, middle, last, phone1,
                  congregation, responsibility, speaker,
@@ -95,6 +94,45 @@ class Brother:
         :type lastName: str
 
         """
+
+
+class Outline:
+    """Class that defines the Outline object"""
+
+    list_outlines = []
+
+    def __init__(self, number, title):
+        """
+        Initialization of the Outline object
+
+        :param number: The number of the outline.
+        :type number: str
+        :param title: The title of the outline.
+        :type title: str
+
+        """
+
+        self.number = number
+        self.title = title
+
+    def set_outline(self):
+        """Sets the outline attributes
+
+        :return: The outline number and title
+        """
+        print((self.number, self.title))
+
+    def get_outline(self):
+        """Retrieves the attributes for the Outline object"""
+        pass
+
+    def search(self):
+        """Searches the Outline object"""
+        pass
+
+    def all(self):
+        """Returns all of the Outline objects"""
+        pass
 
 
 if __name__ == '__main__':

@@ -4,6 +4,14 @@ scr.gui package
 Submodules
 ----------
 
+scr.gui.AddOutlineWindow module
+-------------------------------
+
+.. automodule:: scr.gui.AddOutlineWindow
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 scr.gui.BrotherWindow module
 ----------------------------
 

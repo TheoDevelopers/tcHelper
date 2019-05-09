@@ -197,6 +197,9 @@ class Outline(Base):
     visibility = Column(Boolean, nullable=False, default=True)
     """*False* if the outline has been deleted, otherwise *True*. (boolean)"""
 
+    def __repr__(self):
+        return f"Outline(#{number} - {title}"
+
 
 class SpeakerOut(Base):
     """
@@ -250,18 +253,24 @@ class DB:
         global Base
         Base.metadata.create_all(engine)
 
-    def addItem(self, object):
+    @staticmethod
+    def set(item):
         """
         Adds a record to the database.
 
-        :param object: The table class object to be written
-        :type object: object
+        :param item: The table class object to be written
+        :type item: object
         """
 
-        self.object = object
-
-        session.add(object)
+        session.add(item)
         session.commit()
+
+    @staticmethod
+    def get():
+
+        for id, number, title in session.query(Outline.id, Outline.number, Outline.title):
+            print(id, number, title)
+
 
 
 if __name__ == '__main__':

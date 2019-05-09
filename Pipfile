@@ -6,11 +6,9 @@ verify_ssl = true
 [dev-packages]
 pytest = "*"
 sphinx = "*"
-sphinx-rtd-theme = "*"
 autopep8 = "*"
 flake8 = "*"
 pylint = "*"
-python-language-server = {extras = ["all"],version = "*"}
 pytest-cov = "*"
 
 [packages]
