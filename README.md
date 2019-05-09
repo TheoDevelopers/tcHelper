@@ -1,5 +1,9 @@
 [![Documentation Status](https://readthedocs.org/projects/tchelper/badge/?version=latest)](https://tchelper.readthedocs.io/en/latest/?badge=latest)
 [![Build Status](https://travis-ci.org/TheoDevelopers/tcHelper.svg?branch=master)](https://travis-ci.org/TheoDevelopers/tcHelper)
+[![Gitter](https://badges.gitter.im/gitlabhq/gitlabhq.svg)](https://gitter.im/tcHelper/community)
+
+
+
 
 # What is tcHelper?
 tcHelper is a program to aid public talk coordinators, PTC, in the congregations of Jehovah's Witness.
