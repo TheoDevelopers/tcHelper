@@ -37,6 +37,7 @@ congregations
     - Email address to the video department (Send scriptures to be used, music to play, etc).
     - Date of the weekly public meetings is held.
     - Time the meeting begins.
+    - Note
 - prevent duplicate congregations from being added.
 
 outlines

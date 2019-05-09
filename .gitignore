@@ -4,6 +4,7 @@ _static
 _template
 *.pyc
 scr/__pycache__/
+*.dia.autosave
 
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
