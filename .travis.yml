@@ -6,4 +6,4 @@ install:
     - 'pip install pipenv'
     - 'pipenv install'
 script:
-    - cd scr && python -m pytest ../test/ -v
+    - cd src && python -m pytest ../test/ -v
