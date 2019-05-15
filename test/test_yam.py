@@ -9,7 +9,7 @@ DICT1 = {'first_run': True, 'db_location': '/test/test.db'}
 DICT2 = {'first_run': False, 'db_location': '/test/test.db'}
 
 
-@mock.patch('scr.yam.yaml.safe_load')
+@mock.patch('src.yam.yaml.safe_load')
 def test_get_value(mock_safe_load):
     """Test the get_value function"""
 
@@ -22,8 +22,8 @@ def test_get_value(mock_safe_load):
     assert data2 == '/test/test.db'
 
 
-@mock.patch('scr.yam.yaml.safe_load')
-@mock.patch('scr.yam.write_yaml')
+@mock.patch('src.yam.yaml.safe_load')
+@mock.patch('src.yam.write_yaml')
 def test_set_value(write_yaml, mock_safe_load):
     """Tests the set_value function"""
 
@@ -35,8 +35,8 @@ def test_set_value(write_yaml, mock_safe_load):
     assert write_yaml.called
     write_yaml.assert_called_with(DICT2)
 
-@mock.patch('scr.yam.yaml.safe_load')
-@mock.patch('scr.yam.write_yaml')
+@mock.patch('src.yam.yaml.safe_load')
+@mock.patch('src.yam.write_yaml')
 def test_set_value_missing_key(mock_write_yaml, mock_safe_load):
     """Tests exception when key passed is missing
 

@@ -2,7 +2,7 @@
 
 from PySide2.QtWidgets import QApplication
 from PySide2 import QtWidgets
-import src.gui.MainWindow as MainWindow  # Generated with QtDesigner
+import gui.MainWindow as MainWindow  # Generated with QtDesigner
 from brotherw import BrotherWindow
 from databasew import DatabaseWindow
 from congregationw import CongregationWindow
