@@ -1,11 +1,11 @@
 """
-Tests for the *scr/tchelper* module
+Tests for the *src/tchelper* module
 
 """
 
 from unittest import mock
 import pytest
-import scr.tchelper
+import src.tchelper
 
 
 @pytest.mark.parametrize('value, expected_value', [

@@ -2,7 +2,7 @@
 
 from PySide2.QtWidgets import QApplication
 from PySide2 import QtWidgets
-import gui.MainWindow  # Generated with QtDesigner
+import src.gui.MainWindow as MainWindow  # Generated with QtDesigner
 from brotherw import BrotherWindow
 from databasew import DatabaseWindow
 from congregationw import CongregationWindow
@@ -10,7 +10,7 @@ from outlinew import OutlineWindow
 import sys
 
 
-class MainWindow(QtWidgets.QMainWindow, gui.MainWindow.Ui_MainWindow):
+class MainWindow(QtWidgets.QMainWindow, MainWindow.Ui_MainWindow):
     """The main window of tcHelper when tcHelper starts
 
     From MainWindow all functions of tcHelper is accessed by the end user.

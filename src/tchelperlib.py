@@ -1,4 +1,5 @@
 import database as db
+from PySide2 import QtCore
 
 class Brother:
     """Brother class that defines a person."""
@@ -133,6 +134,14 @@ class Outline:
     def all(self):
         """Returns all of the Outline objects"""
         pass
+
+
+class OutlineModel(QtCore.QAbstractTableModel):
+
+    def __int__(self, data):
+        QtCore.QAbstractTableModel.__init__(self)
+        self.user_data=data
+        self.columns = list(self.user_data[0].keys())
 
 
 if __name__ == '__main__':

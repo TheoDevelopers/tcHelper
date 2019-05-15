@@ -1,8 +1,8 @@
 #!/usr/bin/env python3.7
 from PySide2 import QtWidgets
-import mainw
-import database
-import yam
+import src.mainw as mainw
+import src.database as database
+import src.yam as yam
 
 
 def check_first_run():

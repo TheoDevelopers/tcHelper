@@ -2,7 +2,7 @@
 
 from unittest import mock
 import pytest
-import scr.yam as yam
+import src.yam as yam
 
 # Dictionaries for testing purposes
 DICT1 = {'first_run': True, 'db_location': '/test/test.db'}
